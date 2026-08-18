@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển - Quản Lý Người Dùng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>📊 Bảng Quản Lý Người Dùng</h1>
+            <button class="logout-btn" onclick="logout()">Đăng Xuất</button>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="add-user-section">
+                <input 
+                    type="text" 
+                    id="newFullname" 
+                    placeholder="Họ và tên"
+                >
+                <input 
+                    type="email" 
+                    id="newEmail" 
+                    placeholder="Email"
+                >
+                <input 
+                    type="password" 
+                    id="newPassword" 
+                    placeholder="Mật khẩu"
+                >
+                <button onclick="addUser()">Thêm Người Dùng</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Họ và Tên</th>
+                        <th>Email</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4" class="empty-message">Đang tải dữ liệu...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
